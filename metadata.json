@@ -1,0 +1,21 @@
+{
+  "author": "Sjors van der Geest",
+  "checksums": {
+    "Rakefile": "f37e6131fe7de9a49b09d31596f5fbf1",
+    "manifests/init.pp": "875ccb6c8b5cb54fd2226426a6566253",
+    "Modulefile": "3b0ec9bc3fb8da417638acc77f49f7c1",
+    "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
+    "tests/init.pp": "e17cda682662662559402ee0dfa9da44",
+    "spec/spec_helper.rb": "3ea886dd135e120afa31e0aab12e85b0",
+    "README.markdown": "965a9a474f30a6b3618680898ef6fb0e"
+  },
+  "dependencies": [],
+  "description": "Distributing CA certficates",
+  "license": "GLP 3.0",
+  "name": "CertificateDistribution-certificate_distibution",
+  "project_page": "https://github.com/sjors101/Puppet_CertificateDistribution",
+  "source": "https://github.com/sjors101/Puppet_CertificateDistribution",
+  "summary": "Distibuting CA certficates",
+  "types": [],
+  "version": "1.0.0"
+}
