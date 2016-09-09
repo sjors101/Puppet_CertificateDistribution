@@ -1,0 +1,2 @@
+# Puppet_CertificateDistribution
+Distributing certificates
