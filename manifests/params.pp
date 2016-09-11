@@ -1,3 +1,3 @@
 class certificate_distribution::params {
-  $certifcate_list = ["test.cacert.pem"] 
-  }
+  $certificate_list = ['test.cacert.pem']
+}
