@@ -1,0 +1,3 @@
+fixtures:
+  symlinks:
+    "certificate_distribution": "#{source_dir}"
