@@ -1,5 +1,6 @@
 language: ruby
-script: "rake spec"
+bundler_args: "--without system_tests"
+script: "bundle exec rake spec"
 branches:
   only:
     - master
