@@ -1,5 +1,5 @@
 # Certificate Distribution 
-[![Build Status](https://travis-ci.org/zyronix/Puppet_CertificateDistribution.svg?branch=master)](https://travis-ci.org/zyronix/Puppet_CertificateDistribution)
+[![Build Status](https://travis-ci.org/sjors101/Puppet_CertificateDistribution.svg?branch=master)](https://travis-ci.org/sjors101/Puppet_CertificateDistribution)
 This is the certificate_distibution module. This module manages certificate_distibution for RHEL.
 
 Tested on...
