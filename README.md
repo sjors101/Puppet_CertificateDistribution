@@ -1,5 +1,5 @@
 # Certificate Distribution 
-
+[![Build Status](https://travis-ci.org/zyronix/Puppet_CertificateDistribution.svg?branch=master)](https://travis-ci.org/zyronix/Puppet_CertificateDistribution)
 This is the certificate_distibution module. This module manages certificate_distibution for RHEL.
 
 Tested on...
@@ -17,3 +17,4 @@ test.cacert.pem
 
 2. add the new certifcate to the params.pp<br>
 $certifcates_list = ["test.cacert.pem"] 
+

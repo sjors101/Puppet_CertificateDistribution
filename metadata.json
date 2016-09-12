@@ -11,11 +11,10 @@
   },
   "dependencies": [],
   "description": "Distributing CA certficates",
-  "license": "GLP 3.0",
+  "license": "GPL-3.0+",
   "name": "CertificateDistribution-certificate_distibution",
   "project_page": "https://github.com/sjors101/Puppet_CertificateDistribution",
   "source": "https://github.com/sjors101/Puppet_CertificateDistribution",
   "summary": "Distibuting CA certficates",
-  "types": [],
   "version": "1.0.0"
 }
