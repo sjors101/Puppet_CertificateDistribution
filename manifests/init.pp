@@ -6,6 +6,6 @@
 #
 class certificate_distribution ($certificate_list = $certificate_distribution::params::certificate_list,) inherits
 certificate_distribution::params {
-  class { 'certificate_distribution::install': } ->
-  Class['::certificate_distribution']
+  class { 'certificate_distribution::install': }
+  -> Class['::certificate_distribution']
 }
