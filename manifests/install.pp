@@ -10,7 +10,10 @@ class certificate_distribution::install inherits certificate_distribution {
     command => '/usr/bin/update-ca-trust force-enable',
     onlyif  => '/usr/bin/update-ca-trust check | /bin/grep "DISABLED"',
   }
-  -> certificate_distribution::certificate { $::certificate_distribution::certificate_list: }
+  -> certificate_distribution::certificate {
+    $::certificate_distribution::certificate_list:
+      source => $::certificate_distribution::source
+  }
 
   # learn new ca
   exec { 'update ca-trust':

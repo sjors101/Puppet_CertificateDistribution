@@ -32,4 +32,14 @@ describe 'certificate_distribution' do
       )
     }
   end
+  context 'Deploy with different source path' do
+    let(:params) { { certificate_list: %w[test_ca3], source: 'puppet:///modules/certificate_distribution/test/' } }
+
+    it {
+      is_expected.to compile
+      is_expected.to contain_file('/etc/pki/ca-trust/source/anchors/test_ca3').with(
+        'source' => 'puppet:///modules/certificate_distribution/test/test_ca3',
+      )
+    }
+  end
 end
