@@ -4,8 +4,13 @@
 # 
 # The certificates that are included in the files folder are distributed to the assigned machines.
 #
-class certificate_distribution ($certificate_list = $certificate_distribution::params::certificate_list,) inherits
+# certificate_list is the list of names of the files that should be deployed
+# source is the puppet source path of the files to be deployed. Defaults to: 
+class certificate_distribution (
+  Array  $certificate_list = $certificate_distribution::params::certificate_list,
+  String $source           = $certificate_distribution::params::source,
+) inherits
 certificate_distribution::params {
-  class { 'certificate_distribution::install': } ->
-  Class['::certificate_distribution']
+  class { 'certificate_distribution::install': }
+  -> Class['::certificate_distribution']
 }
