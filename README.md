@@ -5,6 +5,7 @@ This is the certificate_distibution module. This module manages certificate_dist
 Tested on...
 
  * RHEL 6
+ * RHEL 7
 
 ## Example usage
  
@@ -17,3 +18,14 @@ test.cacert.pem
 
 2. add the new certificate to the params.pp<br>
 $certificate_list = ["test.cacert.pem"] 
+
+OR
+
+Call the module:
+
+```
+class {'certificate_distribution':
+  certificate_list => 'cachain.pem',
+  source           => 'puppet:///modules/profile/certificates/'
+}
+```
