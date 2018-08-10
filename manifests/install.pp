@@ -9,6 +9,7 @@ class certificate_distribution::install inherits certificate_distribution {
   -> exec { 'enable update-ca-trust':
     command => '/usr/bin/update-ca-trust force-enable',
     onlyif  => '/usr/bin/update-ca-trust check | /bin/grep "DISABLED"',
+    path    => ['/bin', '/usr/bin'],
   }
   -> certificate_distribution::certificate {
     $::certificate_distribution::certificate_list:
@@ -19,5 +20,6 @@ class certificate_distribution::install inherits certificate_distribution {
   exec { 'update ca-trust':
     command     => '/usr/bin/update-ca-trust extract',
     refreshonly => true,
+    path        => ['/bin', '/usr/bin'],
   }
 }
