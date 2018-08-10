@@ -15,7 +15,7 @@ describe 'certificate_distribution' do
   end
 
   context 'Deploy two certificates' do
-    let(:params) { { certificate_list: %w[test_ca1 test_ca2] } }
+    let(:params) { { certificate_list: ['test_ca1', 'test_ca2'] } }
 
     it {
       is_expected.to contain_class('certificate_distribution')
@@ -33,7 +33,7 @@ describe 'certificate_distribution' do
     }
   end
   context 'Deploy with different source path' do
-    let(:params) { { certificate_list: %w[test_ca3], source: 'puppet:///modules/certificate_distribution/test/' } }
+    let(:params) { { certificate_list: ['test_ca3'], source: 'puppet:///modules/certificate_distribution/test/' } }
 
     it {
       is_expected.to compile

@@ -8,9 +8,30 @@
   "project_page": "https://github.com/sjors101/Puppet_CertificateDistribution",
   "issues_url": "https://github.com/sjors101/Puppet_CertificateDistribution/issues",
   "dependencies": [
-  
+
   ],
-  "data_provider": null,
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7",
+        "6"
+      ]
+    },
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7",
+        "6"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
   "checksums": {
     "manifests/install.pp": "9fd8afdb67e01ce1f75c955cef874291",
     "spec/fixtures/modules/Puppet_CertificateDistribution": "02f94930f3dcad9786d9a1a9e9b352ea",
@@ -31,21 +52,8 @@
     "ca",
     "certificate"
   ],
-  "operatingsystem_support": [
-    {
-      "operatingsystem": "CentOS",
-      "operatingsystemrelease": [
-        "7",
-        "6"
-      ]
-    },
-    {
-      "operatingsystem": "RedHat",
-      "operatingsystemrelease": [
-        "7",
-        "6"
-      ]
-    }
-  ],
-  "description": "Distributing CA certficates"
+  "description": "Distributing CA certficates",
+  "pdk-version": "1.6.1",
+  "template-url": "file://C:/Program Files/Puppet Labs/DevelopmentKit/share/cache/pdk-templates.git",
+  "template-ref": "1.6.1-0-g6b0d497"
 }
