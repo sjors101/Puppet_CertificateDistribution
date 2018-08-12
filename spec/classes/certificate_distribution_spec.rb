@@ -7,7 +7,7 @@ describe 'certificate_distribution' do
       it {
         is_expected.to contain_class('certificate_distribution')
         is_expected.to contain_package('ca-certificates')
-        
+
         case facts[:osfamily]
         when 'RedHat'
           is_expected.to contain_exec('update ca-trust').with(
@@ -34,7 +34,7 @@ describe 'certificate_distribution' do
     context "Deploy two certificates on #{os}" do
       let(:facts) { os_facts }
       let(:params) { { certificate_list: ['test_ca1', 'test_ca2'] } }
-  
+
       it {
         is_expected.to contain_class('certificate_distribution')
         is_expected.to contain_package('ca-certificates')
@@ -71,7 +71,7 @@ describe 'certificate_distribution' do
     context "Deploy with different source path on #{os}" do
       let(:facts) { os_facts }
       let(:params) { { certificate_list: ['test_ca3'], source: 'puppet:///modules/certificate_distribution/test/' } }
-  
+
       it {
         is_expected.to compile
 
@@ -94,6 +94,4 @@ describe 'certificate_distribution' do
       }
     end
   end
-
-  
 end
