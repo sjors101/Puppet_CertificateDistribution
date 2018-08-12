@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "author": "sjors101",
   "summary": "Distibuting CA certficates",
-  "license": "GPL-3.0+",
+  "license": "GPL-3.0",
   "source": "https://github.com/sjors101/Puppet_CertificateDistribution",
   "project_page": "https://github.com/sjors101/Puppet_CertificateDistribution",
   "issues_url": "https://github.com/sjors101/Puppet_CertificateDistribution/issues",
@@ -23,6 +23,12 @@
       "operatingsystemrelease": [
         "7",
         "6"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "9"
       ]
     }
   ],
