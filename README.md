@@ -6,26 +6,39 @@ Tested on...
 
  * RHEL 6
  * RHEL 7
+ * Debian 9
 
 ## Example usage
- 
+
+For easy contribution you can add the certificate to the files folder of this module, but it is beter to use a custom folder. For example in your profile folder.
 The certificates that are included in the files folder and the $certifcates_list in params.pp are distributed to the assigned machines.
 The name in the $certificate_list must be the same as the pem file.<br><br>
 Example:
 
-1. add the PEM file the the certificate_distribution/files/<br>
+1. add the PEM file the the profile/files/<br>
 test.cacert.pem
 
 2. add the new certificate to the params.pp<br>
 $certificate_list = ["test.cacert.pem"] 
 
-OR
+OR even better!
 
-Call the module:
+Call the module (RedHat / CentOS):
+
+Note that for RedHat family the file extension should be '.pem':
 
 ```
 class {'certificate_distribution':
-  certificate_list => 'cachain.pem',
+  certificate_list => ['cachain.pem'],
+  source           => 'puppet:///modules/profile/certificates/'
+}
+```
+
+For Debian family the file extension should be '.crt'
+
+```
+class {'certificate_distribution':
+  certificate_list => ['cachain.crt'],
   source           => 'puppet:///modules/profile/certificates/'
 }
 ```
