@@ -11,7 +11,7 @@ class certificate_distribution::install inherits certificate_distribution {
       source => $::certificate_distribution::source
   }
 
-  if $facts['os']['name'] == 'Redhat' or $facts['os']['name'] == 'CentOS' {
+  if $facts['os']['name'] == 'Redhat' or $facts['os']['name'] == 'CentOS' and $facts['os']['release']['major'] != '7' {
     exec { 'enable update-ca-trust':
       command => '/usr/bin/update-ca-trust force-enable',
       onlyif  => '/usr/bin/update-ca-trust check | /bin/grep "DISABLED"',
