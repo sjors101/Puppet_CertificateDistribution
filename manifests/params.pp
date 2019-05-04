@@ -6,7 +6,7 @@ class certificate_distribution::params {
   $source = 'puppet:///modules/certificate_distribution/'
 
   case $facts['os']['name'] {
-    'RedHat', 'CentOS': {
+    'RedHat', 'CentOS', 'Fedora': {
       $certificate_dir = '/etc/pki/ca-trust/source/anchors/'
       $trust_command = 'update-ca-trust extract'
     }
