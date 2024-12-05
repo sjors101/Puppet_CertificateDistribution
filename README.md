@@ -4,9 +4,13 @@ This is the certificate_distibution module. This module manages certificate_dist
 
 Tested on...
 
- * RHEL 6
  * RHEL 7
+ * RHEL 8
+ * RHEL 9
  * Debian 9
+ * Debian 10
+ * Debian 11
+ * Debian 12
 
 ## Example usage
 

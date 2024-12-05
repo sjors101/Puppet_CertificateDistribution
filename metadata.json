@@ -1,6 +1,6 @@
 {
   "name": "sjors101-certificate_distribution",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "author": "sjors101",
   "summary": "Distibuting CA certficates",
   "license": "GPL-3.0",
@@ -14,20 +14,58 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "7",
-        "6"
+        "9",
+        "8"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "7",
-        "6"
+        "9",
+        "8",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "AlmaLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Rocky",
+      "operatingsystemrelease": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Fedora",
+      "operatingsystemrelease": [
+        "41",
+        "40"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
+        "12",
+        "11",
+        "10",
         "9"
       ]
     }
@@ -35,31 +73,15 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.7.0 < 7.0.0"
+      "version_requirement": ">= 4.7.0 < 9.0.0"
     }
   ],
-  "checksums": {
-    "manifests/install.pp": "9fd8afdb67e01ce1f75c955cef874291",
-    "spec/fixtures/modules/Puppet_CertificateDistribution": "02f94930f3dcad9786d9a1a9e9b352ea",
-    "spec/spec_helper.rb": "0db89c9a486df193c0e40095422e19dc",
-    "manifests/init.pp": "175918189155f87de3fd730f844589aa",
-    "README.md": "bbb22e4e795500fdf78f36fbfb26f70e",
-    "manifests/params.pp": "1b79116d099ff6b6e28094a750583897",
-    "Rakefile": "0254db5d3fc38c67a2c160d7296a24f8",
-    "files/GlasOperatorRootCA.cacert.pem": "29a0235b6a8d4e66b56505e32b9a1e06",
-    "spec/classes/init_spec.rb": "e2d92ea13e4b2b63503b5a89db17cd90",
-    "Modulefile": "5489972555e0b66a3e3a3989daddd446",
-    "manifests/certificate.pp": "a029de52b16578d6bd8c124d1473f1d3",
-    "Gemfile": "681e4347774fc363b31ac5914964acd2",
-    "spec/fixtures/modules/splunk": "02f94930f3dcad9786d9a1a9e9b352ea"
-  },
   "tags": [
     "openssl",
     "ca",
     "certificate"
   ],
-  "description": "Distributing CA certficates",
-  "pdk-version": "1.11.1",
-  "template-url": "pdk-default#1.11.1",
-  "template-ref": "1.11.1-0-g2ff8c24"
+  "pdk-version": "3.3.0",
+  "template-url": "pdk-default#3.3.0",
+  "template-ref": "tags/3.3.0-0-g5d17ec1"
 }
