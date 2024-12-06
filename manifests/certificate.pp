@@ -1,7 +1,8 @@
 # Certificate_distribution::Certificate
 #
-# Used to deploy a certificate, should not be called directly
+# @summary Used to deploy a certificate, should not be called directly
 #
+# @api private
 define certificate_distribution::certificate (String $source) {
   file { "certificate ${name}":
     ensure => file,

@@ -1,12 +1,14 @@
 # Class Certificate_distribution::Params
 #
-# Defaults variables
+# @summary Defaults variables
+#
+# @api private
 class certificate_distribution::params {
   $certificate_list = ['test.cacert.pem']
   $source = 'puppet:///modules/certificate_distribution/'
 
   case $facts['os']['name'] {
-    'RedHat', 'CentOS': {
+    'RedHat', 'CentOS', 'Rocky', 'AlmaLinux', 'Scientific', 'Fedora', 'OracleLinux': {
       $certificate_dir = '/etc/pki/ca-trust/source/anchors/'
       $trust_command = 'update-ca-trust extract'
     }
@@ -16,7 +18,6 @@ class certificate_distribution::params {
     }
     default:            {
       fail("${facts['os']['name']} not supported")
-      }
+    }
   }
-
 }
